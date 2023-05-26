@@ -61,11 +61,9 @@ class StitchedContent(object):
             content += item_section.alternatives[0]['content']
 
         # [ speaker part#.speaker# ] : ( starttime - endtime )
-        header = "[ speaker {}:{} ] : ( {} - {} )".format(
+        header = "[ speaker {}:{} ]".format(
             self.speaker_label.speaker,
-            self.speaker_label.filename,
-            format_duration(self.speaker_label.start_time + self.time_offset),
-            format_duration(self.speaker_label.end_time + self.time_offset)
+            self.speaker_label.filename
         )
 
         return "{}\n{}".format(
